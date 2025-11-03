@@ -30,22 +30,44 @@
       .container{padding:16px;margin:18px}
       h1{font-size:1.2rem}
     }
+    /* new: top row layout - title left, image right */
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:8px;
+    }
+    .top h1{margin:0; flex:1 1 auto;}
+
+    /* update: hero should align to the right within the flex row (no auto centering) */
     .hero{
       display:block;
       width:clamp(120px, 30vw, 320px);
       height:auto;
-      margin:12px auto;
-      border-radius:16px; /* rounded corners */
+      margin:0; /* remove auto-centering */
+      border-radius:16px;
       object-fit:cover;
       box-shadow:0 8px 24px rgba(14,165,164,0.12);
       border:1px solid rgba(6,7,8,0.04);
+      flex:0 0 auto;
+    }
+
+    @media (max-width:600px){
+      .container{padding:16px;margin:18px}
+      h1{font-size:1.2rem}
+      /* stack title and image on small screens */
+      .top{flex-direction:column;align-items:flex-start;}
+      .hero{margin-top:12px; width:clamp(120px, 45vw, 320px);}
     }
   </style>
 </head>
 <body>
   <main class="container" role="main" aria-labelledby="title">
-    <h1 id="title">Tic Tac Toe 3x3: OX Game — Privacy Policy</h1>
-    <img src="image.png" alt="Tic Tac Toe 3x3: OX Game logo" class="hero" />
+    <div class="top">
+      <h1 id="title">Tic Tac Toe 3x3: OX Game — Privacy Policy</h1>
+      <img src="image.png" alt="Tic Tac Toe 3x3: OX Game logo" class="hero" />
+    </div>
     <div class="meta">Last updated: 2025-11-03</div>
 
     <p>This Privacy Policy explains how we collect, use, disclose, and protect information when you use this website. The policy applies only to this site and does not cover third-party services or websites linked from this site.</p>
