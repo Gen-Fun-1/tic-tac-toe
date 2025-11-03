@@ -1,267 +1,79 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<title>Tic‑Tac‑Toe — Responsive</title>
-	<style>
-		:root{
-			--bg:#0f1724;
-			--card:#0b1220;
-			--accent:#06b6d4;
-			--muted:#94a3b8;
-			--win:#16a34a;
-			--size-clamp: clamp(260px, 60vmin, 620px);
-			font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-		}
-		html,body{height:100%;}
-		body{
-			margin:0;
-			background:linear-gradient(180deg,#071021 0%,#071124 100%);
-			color:#e6eef6;
-			display:flex;
-			align-items:center;
-			justify-content:center;
-			padding:24px;
-			box-sizing:border-box;
-		}
-		.app{
-			width:100%;
-			max-width:var(--size-clamp);
-			background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-			border-radius:14px;
-			padding:18px;
-			box-shadow:0 6px 30px rgba(2,6,23,0.6);
-		}
-		.header{
-			display:flex;
-			justify-content:space-between;
-			align-items:center;
-			gap:12px;
-			margin-bottom:12px;
-		}
-		h1{font-size:1rem;margin:0;color:var(--accent);letter-spacing:0.6px}
-		.controls{display:flex;gap:8px;align-items:center}
-		button{
-			background:transparent;
-			border:1px solid rgba(255,255,255,0.06);
-			color:inherit;
-			padding:8px 12px;
-			border-radius:8px;
-			cursor:pointer;
-			font-weight:600;
-		}
-		button.primary{
-			background:var(--accent);
-			color:#002;
-			border:none;
-			box-shadow:0 6px 18px rgba(6,182,212,0.12);
-		}
-		.layout{
-			display:grid;
-			grid-template-columns:1fr 160px;
-			gap:16px;
-		}
-		@media (max-width:720px){
-			.layout{grid-template-columns:1fr; align-items:start;}
-		}
-		.board-wrap{
-			display:flex;
-			align-items:center;
-			justify-content:center;
-			padding:12px;
-		}
-		.board{
-			display:grid;
-			grid-template-columns:repeat(3,1fr);
-			gap:10px;
-			width:100%;
-			max-width:100%;
-			/* keep board square and responsive */
-			padding:10px;
-			box-sizing:border-box;
-		}
-		.cell{
-			background:var(--card);
-			border-radius:10px;
-			display:grid;
-			place-items:center;
-			user-select:none;
-			font-size:clamp(30px, 8vmin, 72px);
-			font-weight:800;
-			color:rgba(255,255,255,0.95);
-			cursor:pointer;
-			aspect-ratio:1/1; /* keeps square */
-			transition:transform .12s ease, background .12s ease;
-			box-shadow:inset 0 -6px 18px rgba(0,0,0,0.35);
-		}
-		.cell:active{transform:scale(.98)}
-		.cell.disabled{opacity:.65;cursor:default}
-		.side{
-			padding:12px;
-			background:rgba(255,255,255,0.02);
-			border-radius:10px;
-			display:flex;
-			flex-direction:column;
-			gap:12px;
-			align-items:stretch;
-		}
-		.status{font-size:.95rem;color:var(--muted)}
-		.score{display:flex;gap:8px;justify-content:space-between;align-items:center}
-		.score .item{display:flex;flex-direction:column;align-items:center;padding:8px;border-radius:8px;background:rgba(255,255,255,0.01)}
-		.win{color:var(--win);font-weight:700}
-		.footer{display:flex;gap:8px;justify-content:space-between;align-items:center;margin-top:8px}
-		.small{font-size:.85rem;color:var(--muted)}
-		/* highlight winning cells */
-		.cell.win{background:linear-gradient(90deg, rgba(22,163,74,0.12), rgba(6,182,212,0.06)); box-shadow:0 6px 22px rgba(6,182,212,0.06);}
-	</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0b1220;
+      --muted:#6b7280;
+      --accent:#0ea5a4;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);}
+    .container{
+      max-width:900px;
+      margin:32px auto;
+      padding:20px;
+      box-sizing:border-box;
+      line-height:1.6;
+    }
+    h1{margin:0 0 12px;font-size:1.4rem;color:var(--accent)}
+    h2{font-size:1rem;margin:18px 0 8px}
+    p{margin:8px 0;color:var(--text)}
+    .meta{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+    ul{margin:8px 0 8px 20px}
+    a{color:var(--accent);text-decoration:none}
+    @media (max-width:600px){
+      .container{padding:16px;margin:18px}
+      h1{font-size:1.2rem}
+    }
+  </style>
 </head>
 <body>
-	<div class="app" role="application" aria-labelledby="title">
-		<div class="header">
-			<h1 id="title">Tic‑Tac‑Toe</h1>
-			<div class="controls">
-				<button id="restart" class="primary" title="Restart game">Restart</button>
-				<button id="swap" title="Swap starting player">Swap Start</button>
-			</div>
-		</div>
+  <main class="container" role="main" aria-labelledby="title">
+    <h1 id="title">Privacy Policy</h1>
+    <div class="meta">Last updated: 2025-11-03</div>
 
-		<div class="layout">
-			<div class="board-wrap">
-				<div class="board" id="board" role="grid" aria-label="Tic tac toe board">
-					<!-- cells injected by JS for brevity -->
-				</div>
-			</div>
+    <p>This Privacy Policy explains how we collect, use, disclose, and protect information when you use this website. The policy applies only to this site and does not cover third-party services or websites linked from this site.</p>
 
-			<aside class="side" aria-label="Game info">
-				<div class="status" id="status" aria-live="polite">Player X starts</div>
-				<div class="score" style="margin-top:6px">
-					<div class="item">
-						<div class="small">X</div>
-						<div id="scoreX">0</div>
-					</div>
-					<div class="item">
-						<div class="small">Draws</div>
-						<div id="scoreD">0</div>
-					</div>
-					<div class="item">
-						<div class="small">O</div>
-						<div id="scoreO">0</div>
-					</div>
-				</div>
-				<div class="footer">
-					<div class="small">Tap a cell to play</div>
-					<div class="small">Responsive • Accessible</div>
-				</div>
-			</aside>
-		</div>
-	</div>
+    <h2>1. Information We Collect</h2>
+    <p>We may collect the following types of information:</p>
+    <ul>
+      <li>Information you provide directly (for example, contact information if you reach out by email).</li>
+      <li>Automatically collected technical data (for example, anonymized usage data, browser type, and device information).</li>
+    </ul>
 
-	<script>
-		// Minimal, clear game logic
-		const boardEl = document.getElementById('board');
-		const statusEl = document.getElementById('status');
-		const restartBtn = document.getElementById('restart');
-		const swapBtn = document.getElementById('swap');
-		const scoreX = document.getElementById('scoreX');
-		const scoreO = document.getElementById('scoreO');
-		const scoreD = document.getElementById('scoreD');
+    <h2>2. How We Use Information</h2>
+    <p>We use information to:</p>
+    <ul>
+      <li>Provide, maintain, and improve the website.</li>
+      <li>Respond to inquiries or requests you submit.</li>
+      <li>Monitor and analyze usage to enhance performance and security.</li>
+    </ul>
 
-		let board = Array(9).fill(null);
-		let current = 'X';
-		let playable = true;
-		let scores = {X:0,O:0,D:0};
+    <h2>3. Cookies and Tracking</h2>
+    <p>This site may use cookies or similar technologies for basic functionality and analytics. You can control cookie preferences through your browser settings.</p>
 
-		const wins = [
-			[0,1,2],[3,4,5],[6,7,8],
-			[0,3,6],[1,4,7],[2,5,8],
-			[0,4,8],[2,4,6]
-		];
+    <h2>4. Sharing and Disclosure</h2>
+    <p>We do not sell personal information. We may share information with service providers who perform services on our behalf, and when required by law or to protect rights and safety.</p>
 
-		function renderBoard(){
-			boardEl.innerHTML = '';
-			board.forEach((val,i)=>{
-				const btn = document.createElement('button');
-				btn.className = 'cell' + (val? ' disabled':'');
-				btn.type = 'button';
-				btn.setAttribute('data-i', i);
-				btn.setAttribute('aria-label', val? `Cell ${i+1} ${val}` : `Cell ${i+1} empty`);
-				btn.innerText = val || '';
-				btn.addEventListener('click', onCell);
-				boardEl.appendChild(btn);
-			});
-		}
+    <h2>5. Data Security</h2>
+    <p>We implement reasonable administrative and technical measures to protect information. However, no method of transmission or storage is completely secure.</p>
 
-		function onCell(e){
-			if(!playable) return;
-			const i = +e.currentTarget.dataset.i;
-			if(board[i]) return;
-			board[i] = current;
-			renderBoard();
-			const result = checkWin();
-			if(result){
-				handleResult(result);
-			} else if(board.every(Boolean)){
-				handleResult('draw');
-			} else {
-				current = current === 'X' ? 'O' : 'X';
-				statusEl.textContent = `Player ${current}'s turn`;
-			}
-		}
+    <h2>6. Retention</h2>
+    <p>We retain information only as long as necessary for the purposes described in this policy or required by law.</p>
 
-		function checkWin(){
-			for(const combo of wins){
-				const [a,b,c] = combo;
-				if(board[a] && board[a] === board[b] && board[a] === board[c]) return {player:board[a], combo};
-			}
-			return null;
-		}
+    <h2>7. Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have rights to access, correct, delete, or export your personal information. To exercise these rights, contact us using the details below.</p>
 
-		function handleResult(result){
-			playable = false;
-			if(result === 'draw'){
-				statusEl.textContent = "It's a draw";
-				scores.D++;
-				scoreD.textContent = scores.D;
-			} else {
-				statusEl.textContent = `Player ${result.player} wins!`;
-				scores[result.player]++;
-				if(result.combo){
-					// highlight winning cells
-					result.combo.forEach(i=>{
-						const cell = boardEl.querySelector(`[data-i="${i}"]`);
-						if(cell) cell.classList.add('win');
-					});
-				}
-				if(result.player === 'X') scoreX.textContent = scores.X;
-				if(result.player === 'O') scoreO.textContent = scores.O;
-			}
-		}
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this policy from time to time. The "Last updated" date will reflect changes.</p>
 
-		function resetBoard(keepStarter=false){
-			board = Array(9).fill(null);
-			playable = true;
-			renderBoard();
-			// clear win highlights
-			boardEl.querySelectorAll('.cell').forEach(c=>c.classList.remove('win'));
-			statusEl.textContent = `Player ${current}'s turn`;
-			if(!keepStarter) current = current === 'X' ? 'X' : 'X'; // no-op placeholder
-		}
-
-		restartBtn.addEventListener('click', ()=>{
-			// simple restart but keep starter same
-			resetBoard(true);
-		});
-		swapBtn.addEventListener('click', ()=>{
-			// swap starting player and restart
-			current = current === 'X' ? 'O' : 'X';
-			resetBoard(true);
-			statusEl.textContent = `Player ${current} starts`;
-		});
-
-		// init
-		renderBoard();
-		statusEl.textContent = `Player ${current} starts`;
-	</script>
+    <h2>9. Contact</h2>
+    <p>If you have questions about this policy, contact: <a href="mailto:privacy@example.com">privacy@example.com</a></p>
+  </main>
 </body>
 </html>
